@@ -21,7 +21,7 @@ const App: React.FC = () => {
   const [availableCages, setAvailableCages] = useState(defaultCages);
   const [cage, setCage] = useState(availableCages[0]); // Initialize with the first available cage
   const [items, setItems] = useState<Item[]>([]); // Data stored locally in state
-  const [loading, setLoading] = useState(false); // No longer loading from external source
+  const [loading] = useState(false); // Removed setLoading as it's not used
   const [error, setError] = useState<string | null>(null);
   const [xlsxLoaded, setXlsxLoaded] = useState(false); // State to track XLSX library loading
 
